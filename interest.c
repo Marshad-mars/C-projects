@@ -5,18 +5,18 @@
 int main() {
     printf("Find the simple or compound interest~ \n");
 
-    char choise[20];
-    printf("Do wanna calculate for simple interest or compund interest?(Enter si for simple inter... or for compund inter... enter ci)- ");
-    scanf("%s",choise);
+    char choise;
+    printf("Do wanna calculate for simple interest or compund interest?(Enter [s] for simple inter... or [c] for compund inter...)- ");
+    scanf("%s", &choise);
 
-    char comp[5] = "ci";
-    char simple[5] = "si";
-    if(choise == simple) {
+    // char comp[5] = "ci";
+    // char simple[5] = "si";
+    if(choise == 's') {
         printf("Find the simple interest and the amount~ \n");
 
         char cur;
-        printf("Enter your currency type(symbol): ");
-        scanf("%c",&cur);
+        printf("Enter your currency type: ");
+        scanf(" %s",&cur);
 
         int prin, tim, rt;
         printf("Enter the principel amount: ");
@@ -35,7 +35,7 @@ int main() {
         return interest;
         return amount;
     }
-    else if(choise == comp) {
+    else if(choise == 's') {
         printf("Find the compund interest and the totel amount~ \n");
 
         char cur;
